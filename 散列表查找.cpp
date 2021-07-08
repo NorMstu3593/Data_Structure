@@ -31,7 +31,7 @@ int h(int key) {
     return key % p;
 }
 
-void create_list(int key) { 
+void create_list(int key) {
     link temp, n;
     int index;
     n = new node;
@@ -39,14 +39,14 @@ void create_list(int key) {
     n->next = NULL;
     index = h(key);
 
-    // 头插法，需要改成尾插法
-    //temp = hashtab[index].next;
-    //if (temp != NULL) {
-    //    n->next = temp;
-    //    hashtab[index].next = n;
-    //} else {
-    //    hashtab[index].next = n;
-    //}
+    // 头插法，不稳定，建议使用尾插法
+//    temp = hashtab[index].next;
+//    if (temp != NULL) {
+//        n->next = temp;
+//        hashtab[index].next = n;
+//    } else {
+//        hashtab[index].next = n;
+//    }
 
     // 尾插法
     temp = hashtab[index].next;
@@ -59,7 +59,7 @@ void create_list(int key) {
     temp -> next = n;
 }
 
-int hash_search(int key) {  
+int hash_search(int key) {
     link pointer;
     int index;
 
