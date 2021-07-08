@@ -31,7 +31,7 @@ int h(int key) {
     return key % p;
 }
 
-void create_list(int key) {  // Construct hash table
+void create_list(int key) { 
     link temp, n;
     int index;
     n = new node;
@@ -59,7 +59,7 @@ void create_list(int key) {  // Construct hash table
     temp -> next = n;
 }
 
-int hash_search(int key) {  // Hash lookup function
+int hash_search(int key) {  
     link pointer;
     int index;
 
